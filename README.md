@@ -8,7 +8,45 @@
 - `area()`: Calculates and returns the area of the circle using the formula π * radius * radius.
 - `perimeter()`: Calculates and returns the perimeter (circumference) of the circle using the formula 2 * π * radius.
 
+**MainShape Class:**
+- `main(String[] args)`: The main method of the program.
+  - Creates instances of `Circle`, `Triangle`, and `Rectangle` classes.
+  - Invokes methods to calculate and display the perimeter and area for each shape.
+  - Prints the perimeter and area of the circle.
+  - Prints the perimeter and area of the triangle.
+  - Prints the perimeter and area of the rectangle.
+ 
+**Rectangle Class:**
+- `length`, `width`: Instance variables representing the length and width of the rectangle.
+- `Rectangle(double length, double width)`: Constructor initializing the rectangle with given length and width.
+- `area()`: Calculates and returns the area of the rectangle using the formula `length * width`.
+- `perimeter()`: Calculates and returns the perimeter of the rectangle using the formula `2 * (length + width)`.
 
+**MainShape Class:**
+- `main(String[] args)`: The main method of the program.
+  - Creates an instance of the `Rectangle` class.
+  - Invokes methods to calculate and display the perimeter and area for the rectangle.
+  - Prints the perimeter and area of the rectangle.
+
+**Shape Interface:**
+- `area()`: Interface method to calculate and return the area of a shape. Classes implementing this interface must provide their implementation.
+- `perimeter()`: Interface method to calculate and return the perimeter of a shape. Classes implementing this interface must provide their implementation.
+
+**Implementing Classes (e.g., Rectangle, Circle, Triangle):**
+- Implement the `Shape` interface by providing concrete implementations for the `area()` and `perimeter()` methods.
+- Each implementing class defines how to calculate the area and perimeter for its specific shape.
+
+**Triangle Class:**
+- `base`, `side1`, `side2`, `height`: Instance variables representing the base, two sides, and height of the triangle.
+- `Triangle(double base, double side1, double side2, double height)`: Constructor initializing the triangle with given base, sides, and height.
+- `area()`: Calculates and returns the area of the triangle using the formula `0.5 * base * height`.
+- `perimeter()`: Calculates and returns the perimeter of the triangle using the formula `base + side1 + side2`.
+
+**MainShape Class:**
+- `main(String[] args)`: The main method of the program.
+  - Creates an instance of the `Triangle` class.
+  - Invokes methods to calculate and display the perimeter and area for the triangle.
+  - Prints the perimeter and area of the triangle.
 
 # PART 2
 
@@ -94,7 +132,28 @@ Certainly, here are all the getter and setter methods present in the `Employee` 
 
 Note: The `Employee` class is abstract and serves as a base class for other employee-related classes. The provided details cover various aspects of employee information and financial components.
 
+**NormalEmployee Class:**
+- Extends the `Employee` class, inheriting its attributes and methods.
+- Implements the `salaryCalculation()` method with specific logic for normal employee salary calculation.
+- Calculates and sets the basic wage (`bw`) based on the total working days, paid days, and gross wage.
+- Calculates and sets the house rent allowance (`hra`) as 40% of the basic wage.
+- Calculates and sets the conveyance allowances (`ca`) as a fixed amount per paid day.
+- Calculates and sets the medical allowances (`ma`) as a fixed amount per paid day.
+- Calculates and sets other allowances (`otherAllo`) as the remaining amount after deducting basic wage, HRA, conveyance allowances, and medical allowances from the total earning.
+- Sets the total earning based on the sum of basic wage, HRA, conveyance allowances, medical allowances, and other allowances.
 
+**SpecialEmployee Class:**
+- Extends the `Employee` class, inheriting its attributes and methods.
+- Implements the `salaryCalculation()` method with specific logic for special employee salary calculation.
+- Calculates and sets the basic wage (`bw`) based on the total working days, paid days, and gross wage.
+- Calculates and sets the house rent allowance (`hra`) as 40% of the basic wage.
+- Calculates and sets the conveyance allowances (`ca`) as a fixed amount per paid day.
+- Calculates and sets the medical allowances (`ma`) as a fixed amount per paid day.
+- Calculates and sets other allowances (`otherAllo`) as the remaining amount after deducting basic wage, HRA, conveyance allowances, and medical allowances from the total earning.
+- Sets the total earning based on the sum of basic wage, HRA, conveyance allowances, medical allowances, and other allowances.
+- Calculates and sets the Employee State Insurance (`esi`) as 0.75% of the total earning.
+- Updates the total earning by adding the ESI amount.
+- Prints the total earnings after ESI calculation.
 
 
 
